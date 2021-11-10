@@ -32,5 +32,6 @@
       "pd/*": ["src/*"]
     }
   },
-  "include": [ "src/**/*","types.d/**/*"]
+  "include": [ "src/**/*","types.d/**/*"],
+  "strictPropertyInitialization": false
 }
