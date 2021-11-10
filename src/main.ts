@@ -1,17 +1,12 @@
 import * as express from 'express';
 import config from './config';
-import loaders from './loaders';
+import infrastructure from './infrastructure';
 
 async function main() {
-  const app = express.default();
-  await loaders(app);
+  const app = express();
+  await infrastructure(app);
 
-  app.listen(config.port, (err: any) => {
-    if (err) {
-      console.log(err);
-      process.exit(1);
-      return;
-    }
+  app.listen(config.port, () => {
     console.log(`Server listening on port: ${config.port}`);
   });
 }
