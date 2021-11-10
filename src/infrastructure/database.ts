@@ -1,23 +1,23 @@
 import Container from 'typedi';
 import { Connection, ConnectionOptions, createConnection, useContainer } from 'typeorm';
-import config from '../config';
+// import config from '../config';
 
 export default async (): Promise<Connection> => {
   // read connection options from ormconfig file (or ENV variables)
 //   const connectionOptions = await getConnectionOptions();
   const connectionOptions: ConnectionOptions = {
     type: "cockroachdb",
-    host: "free-tier7.aws-eu-west-1.cockroachlabs.cloud",
+    host: "crdb",
     port: 26257,
-    username: "uzochukwuonuegbu",
-    password: "zWyH-1ZZGEDEbbJi",
-    database: "emma-assessment-656.defaultdb",
-    ssl: true,
-    extra: {
-      ssl: {
-        rejectUnauthorized: false,
-      },
-    },
+    // username: "uzochukwuonuegbu",
+    // password: "zWyH-1ZZGEDEbbJi",
+    database: "emma-backend",
+    // ssl: true,
+    // extra: {
+    //   ssl: {
+    //     rejectUnauthorized: false,
+    //   },
+    // },
     synchronize: true,
     logging: false,
     entities: ["src/models/**/*.ts"]

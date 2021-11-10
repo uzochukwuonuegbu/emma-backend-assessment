@@ -40,7 +40,8 @@
     "reflect-metadata": "0.1.13",
     "typedi": "0.8.0",
     "typeorm": "0.2.36",
-    "typeorm-typedi-extensions": "0.2.3"
+    "typeorm-typedi-extensions": "0.2.3",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@types/agenda": "2.0.9",
