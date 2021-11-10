@@ -6,39 +6,39 @@ import helmet from 'helmet';
 import routes from '../api';
 
 export default (app: express.Application) => {
-  app.enable('trust proxy');
-  app.use(cors());
-  app.use(helmet());
-  app.use(bodyParser.json());
+    app.enable('trust proxy');
+    app.use(cors());
+    app.use(helmet());
+    app.use(bodyParser.json());
 
-  app.use('/api', routes);
+    app.use('/api', routes);
 
-  /// catch 404 and forward to error handler
-  app.use((_req, _res, next) => {
+    /// catch 404 and forward to error handler
+    app.use((_req, _res, next) => {
     const error: Error = new Error('Not Found');
     next(error);
-  });
+    });
 
-  /// error handlers
-  app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
+    /// error handlers
+    app.use((err: any, _req: Request, res: Response, next: NextFunction) => {
     /**
      * Handle 401 thrown by express-jwt library
      */
     if (err.name === 'UnauthorizedError') {
-      return res
+        return res
         .status(err.status)
         .send({ message: err.message })
         .end();
     }
     return next(err);
-  });
+    });
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+    app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     res.status(err.status || 500);
     res.json({
-      errors: {
+        errors: {
         message: err.message,
-      },
+        },
     });
-  });
+    });
 };

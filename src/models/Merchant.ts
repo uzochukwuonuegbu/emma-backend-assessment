@@ -4,7 +4,7 @@ import {
     Index,
     ObjectID,
     ObjectIdColumn,
-  } from 'typeorm';
+} from 'typeorm';
   
 @Entity()
 export class Merchant {

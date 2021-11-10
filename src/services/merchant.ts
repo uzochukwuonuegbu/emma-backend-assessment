@@ -1,11 +1,15 @@
-import { Service, Inject } from 'typedi';
+import { Service } from 'typedi';
+import { Repository } from 'typeorm';
+import { InjectRepository } from 'typeorm-typedi-extensions';
 import { Merchant } from '../models/Merchant';
 
 @Service()
 export default class MerchantService {
-  constructor(@Inject(Merchant) private readonly merchantRepository: Merchant) {}
+    constructor(@InjectRepository(Merchant) private readonly merchantRepository: Repository<Merchant>) {}
 
-  public async findAllUserMerchants(): Promise<Merchant[]> {
-    return await this.merchantRepository.findAllUserMerchants();
-  }
+    public async findAllUserMerchants(): Promise<Merchant[]> {
+    // 
+    // return await this.merchantRepository.findAllUserMerchants();
+    return [];
+    }
 }
