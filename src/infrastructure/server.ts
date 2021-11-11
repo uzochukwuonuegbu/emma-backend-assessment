@@ -11,7 +11,7 @@ export default (app: express.Application) => {
     app.use(helmet());
     app.use(bodyParser.json());
 
-    app.use('/api', routes);
+    app.use('/', routes);
 
     /// catch 404 and forward to error handler
     app.use((_req, _res, next) => {

@@ -7,12 +7,18 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "prestart:prod": "rimraf dist && npm run build",
-    "start:prod": "node dist/main.js",
+    "start:prod": "npm run prestart:prod && node dist/src/main.js",
     "start": "nodemon",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "migrate:create": "knex migrate:make -x ts",
+    "migrate:latest": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "migrate:rollback:all": "knex migrate:rollback --all",
+    "migrate:up": "npm run prestart:prod && knex migrate:up",
+    "migrate:down": "knex migrate:down"
   },
   "repository": {
     "type": "git",
@@ -36,11 +42,13 @@
     "helmet": "4.6.0",
     "joi": "^17.4.1",
     "jsonwebtoken": "8.5.1",
+    "knex": "^0.95.14",
     "mongodb": "4.0.1",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
     "reflect-metadata": "0.1.13",
+    "rimraf": "^3.0.2",
     "typedi": "0.8.0",
-    "typeorm": "0.2.36",
-    "typeorm-typedi-extensions": "0.2.3",
     "yarn": "^1.22.17"
   },
   "devDependencies": {
