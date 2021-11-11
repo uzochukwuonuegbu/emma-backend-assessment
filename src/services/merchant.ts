@@ -1,4 +1,4 @@
-import { MerchantRepository } from '../repository/merchantRepository';
+import MerchantRepository from '../repository/merchantRepository';
 import { Service } from 'typedi';
 
 @Service('merchantRepository')
