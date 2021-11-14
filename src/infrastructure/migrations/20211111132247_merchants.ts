@@ -14,6 +14,7 @@ export async function up(knex: Knex): Promise<void> {
           table.index('created_at');
         });
       });
+      await knex.seed.run();
 }
 
 

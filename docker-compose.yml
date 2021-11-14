@@ -28,10 +28,10 @@
 
 version: "3"
 services:
-  webapp:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  # webapp:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
   db:
     image: "postgres:13"
     container_name: "my_postgres"
