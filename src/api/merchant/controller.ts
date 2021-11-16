@@ -15,7 +15,6 @@ export class MerchantController {
           queryParams.user = user as string;
           queryParams.date = date as string;
         }
-        console.log(queryParams);
         const result = await this.merchantService.findAllUserMerchants(queryParams);
         return res.json(result);
     } catch (e) {

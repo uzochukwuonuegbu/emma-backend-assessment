@@ -37,4 +37,8 @@ _Note:_ _Make sure to have Docker installed_
 - RUN: **docker-compose up -d** (installs NodeJS and postgres, creates database and tables needed, then seeds them)
 - RUN: **yarn start** (Start the web application)
 
+# Tests:
+
+- Run: **npm test**
+
 

@@ -10,7 +10,7 @@ exports.seed = function(knex: any, Promise: any) {
           user_id: '30ef3db0-fded-4a32-ae1c-cd493efcdaf1',
           date: 1636718400,
           amount: 10000,
-          description: 'vibes and inshallah',
+          description: 'random description',
           merchant_id: 'd134df81-f696-484e-8ce4-04d004dffa55'
         },
         {
@@ -18,7 +18,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '70636fb4-a6e8-4bfc-b34c-d9b27037ddaa',
             date: 1636718500,
             amount: 8000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'd134df81-f696-484e-8ce4-04d004dffa55'
           },
           {
@@ -26,7 +26,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636718600,
             amount: 2000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'baa79e1c-18ce-43ec-bb4b-4d0bdb168440'
           },
           {
@@ -34,7 +34,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '30ef3db0-fded-4a32-ae1c-cd493efcdaf1',
             date: 1636718700,
             amount: 10000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '41c1a8b4-e22a-4d69-9c7f-0ba59d102a0f'
           },
           {
@@ -42,7 +42,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636718800,
             amount: 10000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'd22d3681-2a63-4432-b892-e06a6d7d2c75'
           },
           {
@@ -50,7 +50,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'c6dd0bb9-e629-45bc-b646-04174fb90cb1',
             date: 1636718900,
             amount: 10000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'baa79e1c-18ce-43ec-bb4b-4d0bdb168440'
           },
           {
@@ -58,7 +58,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '30ef3db0-fded-4a32-ae1c-cd493efcdaf1',
             date: 1636719000,
             amount: 100000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '0c106495-052f-4869-953f-a26a86218d7d'
           },
           {
@@ -66,7 +66,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '70636fb4-a6e8-4bfc-b34c-d9b27037ddaa',
             date: 1636719100,
             amount: 10000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '0c106495-052f-4869-953f-a26a86218d7d'
           },
           {
@@ -74,7 +74,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '30ef3db0-fded-4a32-ae1c-cd493efcdaf1',
             date: 1636719200,
             amount: 4300,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'baa79e1c-18ce-43ec-bb4b-4d0bdb168440'
           },
           {
@@ -82,7 +82,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '70636fb4-a6e8-4bfc-b34c-d9b27037ddaa',
             date: 1636719300,
             amount: 3900,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '1a7eb2bf-f82f-4ec0-bf59-41ea203b55d4'
           },
           {
@@ -90,7 +90,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636719400,
             amount: 50000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '4e6c21e0-ad7a-4d0d-aab5-e61d592b0783'
           },
           {
@@ -98,7 +98,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636719500,
             amount: 37990,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '4e6c21e0-ad7a-4d0d-aab5-e61d592b0783'
           },
           {
@@ -106,7 +106,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '70636fb4-a6e8-4bfc-b34c-d9b27037ddaa',
             date: 1636719600,
             amount: 45440,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '1a7eb2bf-f82f-4ec0-bf59-41ea203b55d4'
           },
           {
@@ -114,7 +114,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'c6dd0bb9-e629-45bc-b646-04174fb90cb1',
             date: 1636719700,
             amount: 567710,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '138c128c-9ce9-4dfa-939e-49bc4bccc164'
           },
           {
@@ -122,7 +122,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636719800,
             amount: 58880,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '4e6c21e0-ad7a-4d0d-aab5-e61d592b0783'
           },
           {
@@ -130,7 +130,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5434348b-3c21-42d5-9381-b41031587d68',
             date: 1636719900,
             amount: 1000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '1a7eb2bf-f82f-4ec0-bf59-41ea203b55d4'
           },
           {
@@ -138,7 +138,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636720000,
             amount: 37000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '138c128c-9ce9-4dfa-939e-49bc4bccc164'
           },
           {
@@ -146,7 +146,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'c6dd0bb9-e629-45bc-b646-04174fb90cb1',
             date: 1636720100,
             amount: 43000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '24a47370-eaaf-4c74-a27d-117cfa444db0'
           },
           {
@@ -154,7 +154,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '0bbad917-0f19-4d20-9ba4-eee37086f23e',
             date: 1636720200,
             amount: 12000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '138c128c-9ce9-4dfa-939e-49bc4bccc164'
           },
           {
@@ -162,7 +162,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5434348b-3c21-42d5-9381-b41031587d68',
             date: 1636720300,
             amount: 15000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '98bb3a08-3507-439f-a14d-349ad4f3a5d5'
           },
           {
@@ -170,7 +170,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: 'b5bbbe0b-8b17-4729-9449-839e9949421e',
             date: 1636720400,
             amount: 10000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'c4fb5a52-c688-4838-9b65-9739231f5813'
           },
           {
@@ -178,7 +178,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '0bbad917-0f19-4d20-9ba4-eee37086f23e',
             date: 1636720500,
             amount: 2100,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '98bb3a08-3507-439f-a14d-349ad4f3a5d5'
           },
           {
@@ -186,7 +186,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5d935f37-3631-45c2-9653-b756e2855f62',
             date: 1636720600,
             amount: 23000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '0cf360ae-5698-4053-a788-4c19bcf36241'
           },
           {
@@ -194,7 +194,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5d935f37-3631-45c2-9653-b756e2855f62',
             date: 1636720700,
             amount: 48090,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'e9e3ebf5-064b-408f-9ba6-29eb2d44f01d'
           },
           {
@@ -202,7 +202,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '0bbad917-0f19-4d20-9ba4-eee37086f23e',
             date: 1636720800,
             amount: 58000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '4e6c21e0-ad7a-4d0d-aab5-e61d592b0783'
           },
           {
@@ -210,7 +210,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5d935f37-3631-45c2-9653-b756e2855f62',
             date: 1636720900,
             amount: 10000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '0cf360ae-5698-4053-a788-4c19bcf36241'
           },
           {
@@ -218,7 +218,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5d935f37-3631-45c2-9653-b756e2855f62',
             date: 1636721000,
             amount: 43100,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: 'e9e3ebf5-064b-408f-9ba6-29eb2d44f01d'
           },
           {
@@ -226,7 +226,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5d935f37-3631-45c2-9653-b756e2855f62',
             date: 1636721100,
             amount: 32000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '8cd99907-a223-462b-a925-e4213cfb19a8'
           },
           {
@@ -234,7 +234,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '08db78af-86d8-46fd-9585-c18125b82c02',
             date: 1636721200,
             amount: 8900,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '8cd99907-a223-462b-a925-e4213cfb19a8'
           },
           {
@@ -242,7 +242,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '0bbad917-0f19-4d20-9ba4-eee37086f23e',
             date: 1636721300,
             amount: 9000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '8cd99907-a223-462b-a925-e4213cfb19a8'
           },
           {
@@ -250,7 +250,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5caa076d-ebf1-42d1-99de-81816d476f90',
             date: 1636721400,
             amount: 67100,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '8cd99907-a223-462b-a925-e4213cfb19a8'
           },
           {
@@ -258,7 +258,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '08db78af-86d8-46fd-9585-c18125b82c02',
             date: 1636721500,
             amount: 34000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '0cf360ae-5698-4053-a788-4c19bcf36241'
           },
           {
@@ -266,7 +266,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5d935f37-3631-45c2-9653-b756e2855f62',
             date: 1636721600,
             amount: 4730,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '0cf360ae-5698-4053-a788-4c19bcf36241'
           },
           {
@@ -274,7 +274,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '08db78af-86d8-46fd-9585-c18125b82c02',
             date: 1636721700,
             amount: 30000,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '8a38df73-8990-4c29-b6f9-f100790d8097'
           },
           {
@@ -282,7 +282,7 @@ exports.seed = function(knex: any, Promise: any) {
             user_id: '5caa076d-ebf1-42d1-99de-81816d476f90',
             date: 1636721800,
             amount: 10500,
-            description: 'vibes and inshallah',
+            description: 'random description',
             merchant_id: '8a38df73-8990-4c29-b6f9-f100790d8097'
           }
       ]);
