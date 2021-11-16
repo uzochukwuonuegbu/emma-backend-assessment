@@ -4,8 +4,8 @@ const { resolve } = path;
 
 const connection = {
   host: 'localhost',
-  database: 'emma_backend',
-  user: 'postgres',
+  database: 'emma_backend_3',
+  user: 'developer_3',
   password: 'my_password',
   port: 54320,
 };

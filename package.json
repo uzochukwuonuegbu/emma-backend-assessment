@@ -7,8 +7,8 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "prestart:prod": "rimraf dist && npm run build",
-    "start:prod": "npm run prestart:prod && node dist/src/main.js",
-    "start": "nodemon",
+    "start": "npm run prestart:prod && node dist/src/main.js",
+    "start:nodemon": "nodemon",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,7 +18,8 @@
     "migrate:rollback": "knex migrate:rollback",
     "migrate:rollback:all": "knex migrate:rollback --all",
     "migrate:up": "npm run prestart:prod && knex migrate:up",
-    "migrate:down": "knex migrate:down"
+    "migrate:down": "knex migrate:down",
+    "setup_db": "npm run migrate:create users && npm run migrate:create merchants && npm run migrate:create transactions && npm run migrate:up"
   },
   "repository": {
     "type": "git",

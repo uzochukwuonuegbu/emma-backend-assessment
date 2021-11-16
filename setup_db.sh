@@ -2,7 +2,4 @@
 echo Wait for servers to be up
 sleep 10
 
-HOSTPARAMS="--host db-1 --insecure"
-SQL="/cockroach/cockroach.sh sql $HOSTPARAMS"
-
-$SQL -e "CREATE DATABASE emma-backend;"
+echo "CREATE DATABASE emma_backend;" | sqlplus -s postgres/my_postgres@localhost/emma_backend
