@@ -1,13 +1,12 @@
-import { MerchantRepository } from 'pd/repository/merchantRepository';
+import MerchantRepository from '../repository/merchantRepository';
 import { Service } from 'typedi';
-import { InjectRepository } from 'typeorm-typedi-extensions';
-import { Merchant } from '../entities/Merchant';
+import { FindUserMerchantsAndPercentileRank, QueryParams } from '../types';
 
-@Service()
+@Service('merchantRepository')
 export class MerchantService {
-    constructor(@InjectRepository(MerchantRepository) private readonly merchantRepository: MerchantRepository) {}
+    constructor(private readonly merchantRepository: MerchantRepository) {}
 
-    public async findAllUserMerchants(): Promise<Merchant[]> {
-        return await this.merchantRepository.findAllUserMerchants();
+    public async findAllUserMerchants(queryParams: QueryParams): Promise<FindUserMerchantsAndPercentileRank[]> {
+        return await this.merchantRepository.findUserMerchantsAndPercentileRank(queryParams);
     }
 }

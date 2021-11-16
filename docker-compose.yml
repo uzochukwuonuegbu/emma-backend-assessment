@@ -1,26 +1,51 @@
-version: '3.8'
+# version: '3.8'
 
+# services:
+  # webapp:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+#   crdb:
+#     container_name: crdb
+#     hostname: crdb
+#     image: cockroachdb/cockroach:latest
+#     command: start-single-node --cluster-name=emma-single-node --logtostderr=WARNING --log-file-verbosity=WARNING --insecure
+#     ports:
+#       - "26257:26257"
+#       - "8080:8080"
+
+#   crdb-init:
+#     container_name: crdb-init
+#     hostname: crdb-init
+#     image: cockroachdb/cockroach:latest
+#     environment:
+#       - COCKROACH_HOST=crdb:26257
+#       - COCKROACH_INSECURE=true
+#       - DATABASE_NAME=emma-backend
+#     depends_on:
+#       - crdb
+
+
+version: "3"
 services:
+  postgres:
+    build:
+      context: .
+      dockerfile: postgres.Dockerfile
   webapp:
     build:
       context: .
       dockerfile: Dockerfile
-  crdb:
-    container_name: crdb
-    hostname: crdb
-    image: cockroachdb/cockroach:latest
-    command: start-single-node --cluster-name=emma-single-node --logtostderr=WARNING --log-file-verbosity=WARNING --insecure
-    ports:
-      - "26257:26257"
-      - "8080:8080"
-
-  crdb-init:
-    container_name: crdb-init
-    hostname: crdb-init
-    image: cockroachdb/cockroach:latest
+  db:
+    image: "postgres:13"
+    container_name: "my_postgres"
     environment:
-      - COCKROACH_HOST=crdb:26257
-      - COCKROACH_INSECURE=true
-      - DATABASE_NAME=emma-backend
-    depends_on:
-      - crdb
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    ports:
+      - "54320:5432"
+    volumes:
+      - my_dbdata:/var/lib/postgresql/data
+volumes:
+  my_dbdata:

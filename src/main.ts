@@ -1,10 +1,12 @@
-import * as express from 'express';
+import 'reflect-metadata';
+
+import express from 'express';
 import config from './config';
-import infrastructure from './infrastructure';
+import { setupServer } from './infrastructure';
 
 async function main() {
     const app = express();
-    await infrastructure(app);
+    await setupServer(app);
 
     app.listen(config.port, () => {
     console.log(`Server listening on port: ${config.port}`);

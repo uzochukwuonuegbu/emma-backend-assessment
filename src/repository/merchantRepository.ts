@@ -1,14 +1,33 @@
+import e from 'express';
+import { Knex } from 'knex';
+import { Cache } from '../infrastructure/cache';
+import { FindUserMerchantsAndPercentileRank, QueryParams } from '../types';
 import { Service } from 'typedi';
-import { Repository } from 'typeorm';
-import { InjectRepository } from 'typeorm-typedi-extensions';
-import { Merchant } from '../entities/Merchant';
+import { DbClass } from '../infrastructure/database'
+import { findUserMerchantsAndPercentileRank } from './sqlQueries';
+
 
 @Service()
-export class MerchantRepository {
-    constructor(@InjectRepository(Merchant) private readonly merchantEntity: Repository<Merchant>) {}
+export default class MerchantRepository {
+    dbInstance: Knex<any, unknown[]>;
+    constructor(private readonly dbClass: DbClass, private readonly cache: Cache) {
+        this.dbInstance = this.dbClass.createConnectionPool();
+    }
 
-    public async findAllUserMerchants(): Promise<Merchant[]> {
-        const merchants = await this.merchantEntity.query(`SELECT * FROM MERCHANT`);
-        return merchants;
+    public async findUserMerchantsAndPercentileRank(queryParams: QueryParams): Promise<FindUserMerchantsAndPercentileRank[]> {
+        const { user = '', date = '' } = queryParams;
+        try {
+            const query = findUserMerchantsAndPercentileRank(user, date);
+            const cachedData = await this.cache.getAsync(query);
+            if (cachedData == undefined) {
+                const { rows } = await this.dbInstance.raw(findUserMerchantsAndPercentileRank(user, date));
+                await this.cache.setAsync(query, JSON.stringify(rows), 10000);
+                return rows;
+            }
+            return JSON.parse(cachedData);
+        } catch(error) {
+            console.log(error);
+            throw e;
+        }
     }
 }

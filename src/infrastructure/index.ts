@@ -1,12 +1,10 @@
-import * as express from 'express';
 import 'reflect-metadata';
-import database from './database';
+
+import * as express from 'express';
 import server from './server';
 
-export default async (app: express.Application) => {
-    await database();
-    console.log('DB loaded and connected!');
 
+export const setupServer = async (app: express.Application) => {
     await server(app);
     console.log('Server loaded!');
 };
