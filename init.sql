@@ -1,4 +1,4 @@
-CREATE USER developer_3 SUPERUSER;
+CREATE USER developer5 SUPERUSER;
 
-CREATE DATABASE emma_backend_3 WITh OWNER developer_3;
--- GRANT ALL PRIVILEGES ON DATABASE emma_backend_3 TO developer_3;
+CREATE DATABASE emma_backend_3 WITh OWNER developer5;
+GRANT ALL PRIVILEGES ON DATABASE emma_backend_3 TO developer5;
