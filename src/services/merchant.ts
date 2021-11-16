@@ -7,6 +7,11 @@ export class MerchantService {
     constructor(private readonly merchantRepository: MerchantRepository) {}
 
     public async findAllUserMerchants(queryParams: QueryParams): Promise<FindUserMerchantsAndPercentileRank[]> {
-        return await this.merchantRepository.findUserMerchantsAndPercentileRank(queryParams);
+        try {
+            return await this.merchantRepository.findUserMerchantsAndPercentileRank(queryParams);
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
     }
 }
