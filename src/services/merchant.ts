@@ -7,6 +7,6 @@ export class MerchantService {
     constructor(private readonly merchantRepository: MerchantRepository) {}
 
     public async findAllUserMerchants(queryParams: QueryParams): Promise<any> {
-        return await this.merchantRepository.findAllUserMerchants(queryParams);
+        return await this.merchantRepository.findUserMerchantsAndPercentileRank(queryParams);
     }
 }

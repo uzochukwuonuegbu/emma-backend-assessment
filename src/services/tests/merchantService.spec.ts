@@ -15,14 +15,14 @@ describe('MerchantService', () => {
 
     describe('findAllUserMerchants', () => {
         it('should get all merchants a user spent money on for a period of time', async () => {
-            jest.spyOn(merchantRepository, 'findAllUserMerchants').mockImplementation(() => new Promise((resolve) => resolve([])));
+            jest.spyOn(merchantRepository, 'findUserMerchantsAndPercentileRank').mockImplementation(() => new Promise((resolve) => resolve([])));
 
             const queryParams = {
                 user: 'xyz',
                 date: '1234453443'
             };
             await merchantService.findAllUserMerchants(queryParams);
-            expect(merchantRepository.findAllUserMerchants).toHaveBeenCalled();
+            expect(merchantRepository.findUserMerchantsAndPercentileRank).toHaveBeenCalled();
         });
     });
 });
