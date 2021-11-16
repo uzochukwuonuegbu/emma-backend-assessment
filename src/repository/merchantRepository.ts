@@ -1,7 +1,7 @@
 import e from 'express';
 import { Knex } from 'knex';
 import { Cache } from '../infrastructure/cache';
-import { QueryParams } from 'pd/types';
+import { FindUserMerchantsAndPercentileRank, QueryParams } from '../types';
 import { Service } from 'typedi';
 import { DbClass } from '../infrastructure/database'
 import { findUserMerchantsAndPercentileRank } from './sqlQueries';
@@ -14,7 +14,7 @@ export default class MerchantRepository {
         this.dbInstance = this.dbClass.createConnectionPool();
     }
 
-    public async findUserMerchantsAndPercentileRank(queryParams: QueryParams): Promise<any[]> {
+    public async findUserMerchantsAndPercentileRank(queryParams: QueryParams): Promise<FindUserMerchantsAndPercentileRank[]> {
         const { user = '', date = '' } = queryParams;
         try {
             const query = findUserMerchantsAndPercentileRank(user, date);

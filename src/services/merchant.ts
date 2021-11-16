@@ -1,12 +1,12 @@
 import MerchantRepository from '../repository/merchantRepository';
 import { Service } from 'typedi';
-import { QueryParams } from '../types';
+import { FindUserMerchantsAndPercentileRank, QueryParams } from '../types';
 
 @Service('merchantRepository')
 export class MerchantService {
     constructor(private readonly merchantRepository: MerchantRepository) {}
 
-    public async findAllUserMerchants(queryParams: QueryParams): Promise<any> {
+    public async findAllUserMerchants(queryParams: QueryParams): Promise<FindUserMerchantsAndPercentileRank[]> {
         return await this.merchantRepository.findUserMerchantsAndPercentileRank(queryParams);
     }
 }

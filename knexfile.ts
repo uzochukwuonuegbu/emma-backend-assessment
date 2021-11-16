@@ -1,13 +1,14 @@
 const path = require('path');
+import config from './src/config';
 
 const { resolve } = path;
 
 const connection = {
   host: 'localhost',
-  database: 'emma_backend_3',
-  user: 'developer_3',
-  password: 'my_password',
-  port: 54320,
+  database: config.db.database,
+  user: config.db.user,
+  password: config.db.password,
+  port: config.db.port,
 };
 
 const knexConfig = {
